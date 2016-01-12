@@ -10,11 +10,11 @@ def print_directory_contents(path):
     This function is similar to os.walk. I've built it just for learning purposes.
     """
     for child in os.listdir(path):
-        childPath = os.path.join(path, child)
-        if os.path.isdir(childPath):
-            print_directory_contents(childPath)
+        child_path = os.path.join(path, child)
+        if os.path.isdir(child_path):
+            print_directory_contents(child_path)
         else:
-            print(childPath)
+            print(child_path)
 
 
 if __name__ == "__main__":
